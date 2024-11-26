@@ -3,4 +3,5 @@ from django.apps import AppConfig
 
 class ServicesConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'Services'
+    name = 'services'
+    verbose_name = _('Gestor de servicios')
