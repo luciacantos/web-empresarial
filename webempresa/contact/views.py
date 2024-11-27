@@ -14,10 +14,10 @@ def contact(request):
 
 
             email_message = EmailMessage(
-                subject="Tesis: Nuevo mensaje de contacto",
+                subject="Nuevo mensaje de contacto",
                 body=f"De {name} <{email}>\n\nEscribió:\n\n{content}",
                 from_email=EMAIL_HOST_USER,
-                to=["luciacantos22@gmail.com"],
+                to=["63f6f681b3d1ef@inbox.mailtrap.io"],
                 reply_to=[email]
             )
 
@@ -25,7 +25,6 @@ def contact(request):
                 email_message.send()
                 return redirect(reverse('contact') + "?ok")
             except:
-
                 return redirect(reverse('contact') + "?fail")
     else:
         form = ContactForm()
