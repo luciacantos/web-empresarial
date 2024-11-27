@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 import os
+import json
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -152,3 +153,14 @@ CKEDITOR_CONFIGS = {
 								]
 				}
 			}
+
+# email
+EMAIL_SETTINGS_FILE = os.path.join(BASE_DIR, 'email_settings.json')
+with open(EMAIL_SETTINGS_FILE) as data_file:
+    email_settings = json.load(data_file)
+
+EMAIL_HOST = email_settings['EMAIL_HOST']
+EMAIL_PORT = email_settings['EMAIL_PORT']
+EMAIL_USE_TLS = email_settings['EMAIL_USE_TLS']
+EMAIL_HOST_USER = email_settings['EMAIL_HOST_USER']
+EMAIL_HOST_PASSWORD = email_settings['EMAIL_HOST_PASSWORD']
