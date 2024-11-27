@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'core',
     'services.apps.ServicesConfig',
     'blog.apps.BlogConfig',
+    'social.apps.SocialConfig',
 ]
 
 MIDDLEWARE = [
