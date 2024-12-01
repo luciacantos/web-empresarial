@@ -1,25 +1,50 @@
 {% extends 'core/base.html' %}
 {% load static %}
-{% block title %}Historia{% endblock %}
+{% block title %}Conócenos{% endblock %}
 
 {% block content %}
-		<section class="page-section about-heading">
-			<div class="container">
-				<img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/about.jpg" alt="">
-				<div class="about-heading-content">
-					<div class="row">
-						<div class="col-xl-9 col-lg-10 mx-auto">
-							<div class="bg-faded rounded p-5">
-								<h2 class="section-heading mb-4">
-									<span class="section-heading-upper">Tradición familiar italiana</span>
-									<span class="section-heading-lower">Nuestra historia</span>
-								</h2>
-								<p>Fundada en 1987 consectetur adipiscing elit. Donec leo dui, vehicula vel dapibus ac, tempus non enim. Nunc tempor vel lacus vel gravida. Nam sit amet pellentesque mi. </p>
-								<p>Curabitur efficitur pellentesque tellus nec volutpat. In viverra mattis sem, facilisis condimentum mi rutrum ut. Quisque ut pellentesque dui.Nullam eu vehicula metus. Pellentesque id interdum elit. Aenean in efficitur enim.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+<section class="page-section about-heading">
+    <div class="container">
+        <img src="{% static 'core/img/about.png' %}" alt="About">
+        <div class="about-heading-content">
+            <div class="row">
+                <div class="col-xl-9 col-lg-10 mx-auto">
+                    <div class="bg-faded rounded p-5">
+                        <h2 class="section-heading mb-4">
+                            <span class="section-heading-upper">Tradición familiar</span>
+                            <span class="section-heading-lower">Nuestra historia</span>
+                        </h2>
+                        <p>En un pequeño pueblo, una familia decidió abrir una hamburguesería con el objetivo de ofrecer algo único. Durante años, habían perfeccionado una receta especial de hamburguesas, que combinaba carne de calidad, pan fresco y una salsa secreta que había pasado de generación en generación. 
+
+                            El local, llamado Brutal B, se diseñó con un toque rústico, lleno de recuerdos y detalles que reflejaban el espíritu de la familia. Desde su apertura, el lugar ganó popularidad rápidamente, no solo por la calidad de sus hamburguesas, sino también por su ambiente acogedor que hacía sentir a todos como en casa. 
+
+                            En poco tiempo, Brutal B se convirtió en un referente local, atrayendo tanto a vecinos como a visitantes de otras ciudades. A pesar del éxito, la familia nunca perdió su enfoque en lo que realmente importaba: ofrecer una experiencia auténtica, donde cada hamburguesa era un reflejo del amor por la cocina y la tradición.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Horarios -->
+            <div class="row mt-5">
+                <div class="col-xl-9 col-lg-10 mx-auto">
+                    <div class="bg-light rounded p-4 shadow">
+                        <h3 class="section-heading mb-3">
+                            <span class="section-heading-upper">Horarios</span>
+                        </h3>
+                        <table class="table table-bordered">
+                            <tbody>
+                                <tr><th>Domingo</th><td>1:30–4 p.m., 8:30–11 p.m.</td></tr>
+                                <tr><th>Lunes</th><td>Cerrado</td></tr>
+                                <tr><th>Martes</th><td>8:30–11 p.m.</td></tr>
+                                <tr><th>Miércoles</th><td>1:30–4 p.m., 8:30–11 p.m.</td></tr>
+                                <tr><th>Jueves</th><td>1:30–4 p.m., 8:30–11 p.m.</td></tr>
+                                <tr><th>Viernes</th><td>1:30–4 p.m., 8:30–11:30 p.m.</td></tr>
+                                <tr><th>Sábado</th><td>1:30–4 p.m., 8:30–11:30 p.m.</td></tr>
+                            </tbody>
+                        </table>
+                        <p class="mt-2 text-muted">*Los horarios pueden variar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}

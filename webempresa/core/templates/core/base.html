@@ -8,7 +8,7 @@
 
 		<title>{% block title %}{% endblock %}</title>
 
-		{% load static %}po
+		{% load static %}
 
 		<!-- Bootstrap -->
 		<link href="{% static 'core/vendor/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
@@ -22,42 +22,51 @@
 		<link href="{% static 'core/css/business-casual.css' %}" rel="stylesheet">
 	</head>
 	<body>
-		<h1 class="site-heading text-center text-white d-none d-lg-block">
-			<span class="site-heading-upper text-primary mb-3">L'autentico caffè d'italia</span>
-			<span class="site-heading-lower">La Caffettiera</span>
-		</h1>
+		<!-- Logo -->
+		<div class="text-center mb-4">
+			<img src="{% static 'core/img/logo.png' %}" alt="Logo del Restaurante" class="img-fluid">
+		</div>
+	</body>
+</html>
 
 		<!-- Navegación -->
-		<nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
-			<div class="container">
-				<a class="navbar-brand text-uppercase text-expanded d-lg-none" href="{% url 'home' %}">La Caffettiera</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarResponsive">
-					<ul class="navbar-nav mx-auto">
-						<li class="nav-item active px-lg-4 {% if request.path == '/' %}active{% endif %}">
-							<a class="nav-link text-uppercase text-expanded" href="{% url 'home' %}">Inicio</a>
-						</li>
-						<li class="nav-item px-lg-4 {% if request.path == '/about/' %}active{% endif %}">
-							<a class="nav-link text-uppercase text-expanded" href="{% url 'about' %}">Historia</a>
-						</li>
-						<li class="nav-item px-lg-4 {% if request.path == '/services/' %}active{% endif %}">
-							<a class="nav-link text-uppercase text-expanded" href="{% url 'services' %}">Servicios</a>
-						</li>
-						<li class="nav-item px-lg-4 {% if request.path == '/store/' %}active{% endif %}">
-							<a class="nav-link text-uppercase text-expanded" href="{% url 'store' %}">Visítanos</a>
-						</li>
-						<li class="nav-item px-lg-4 {% if request.path == '/contact/' %}active{% endif %}">
-							<a class="nav-link text-uppercase text-expanded" href="{% url 'contact' %}">Contacto</a>
-						</li>
-						<li class="nav-item px-lg-4 {% if request.path == '/blog/' %}active{% endif %}">
-							<a class="nav-link text-uppercase text-expanded" href="{% url 'blog' %}">Blog</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
+<nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+	<div class="container">
+	  <a class="navbar-brand text-uppercase text-expanded d-lg-none" href="{% url 'home' %}">hamburguesería</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navbarResponsive">
+		<ul class="navbar-nav mx-auto">
+		  <!-- Inicio -->
+		  <li class="nav-item px-lg-4 {% if request.path == '/' %}active{% endif %}">
+			<a class="nav-link text-uppercase text-expanded" href="{% url 'home' %}">Inicio</a>
+		  </li>
+		  <!-- Historia -->
+		  <li class="nav-item px-lg-4 {% if request.path == '/about/' %}active{% endif %}">
+			<a class="nav-link text-uppercase text-expanded" href="{% url 'about' %}">Conócenos</a>
+		  </li>
+		  <!-- Servicios -->
+		  <li class="nav-item px-lg-4 {% if request.path == '/services/' %}active{% endif %}">
+			<a class="nav-link text-uppercase text-expanded" href="{% url 'services' %}">Servicios</a>
+		  </li>
+		  <!-- Carta -->
+		  <li class="nav-item px-lg-4 {% if request.path == '/store/' %}active{% endif %}">
+			<a class="nav-link text-uppercase text-expanded" href="{% url 'store' %}">Carta</a>
+		  </li>
+		  <!-- Contacto -->
+		  <li class="nav-item px-lg-4 {% if request.path == '/contact/' %}active{% endif %}">
+			<a class="nav-link text-uppercase text-expanded" href="{% url 'reservation' %}">Reserva</a>
+		  </li>
+		  <!-- Blog -->
+		  <li class="nav-item px-lg-4 {% if request.path == '/blog/' %}active{% endif %}">
+			<a class="nav-link text-uppercase text-expanded" href="{% url 'blog' %}">Blog</a>
+		  </li>
+		</ul>
+	  </div>
+	</div>
+  </nav>
+  
 
         {% block content %} {% endblock %}
 
@@ -65,19 +74,19 @@
 		<footer class="footer text-faded text-center py-5">
 			<div class="container">
 				<p class="m-0">
-					<a href="https://www.google.com/search?sca_esv=201d89d0c7881277&sxsrf=ADLYWIJv2WCun4YRlpraEAju8be6dLMBiw:1732672231660&q=gato+fumon&udm=2&fbs=AEQNm0CbCVgAZ5mWEJDg6aoPVcBgWizR0-0aFOH11Sb5tlNhd9L2WHVzAvhMQbvbuARNpGCC4xfwSkAb6AbJ_cFnFQ_t3F50re_2lfl2PiUOJtSTPPJP7q34HXdL4rRAxoEw8yawZaJvh0qbCSUZZ6J7_rC65lCaOzzOWDGyl4b6Y6oyJqzF4DGv3XpC6FSnnfeRyK6xScvr&sa=X&sqi=2&ved=2ahUKEwipkoWHs_uJAxX-K_sDHZVWMy8QtKgLegQIFRAB&biw=1920&bih=945&dpr=1#vhid=_vhFXqAGC-YRRM&vssid=mosaic" class="link">
+					<a href="https://x.com/hamburperfecta" class="link">
 						<span class="fa-stack fa-lg">
 							<i class="fa fa-circle fa-stack-2x"></i>
 							<i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
 						</span>
 					</a>
-					<a href="https://www.google.com/search?sca_esv=201d89d0c7881277&sxsrf=ADLYWIJv2WCun4YRlpraEAju8be6dLMBiw:1732672231660&q=gato+fumon&udm=2&fbs=AEQNm0CbCVgAZ5mWEJDg6aoPVcBgWizR0-0aFOH11Sb5tlNhd9L2WHVzAvhMQbvbuARNpGCC4xfwSkAb6AbJ_cFnFQ_t3F50re_2lfl2PiUOJtSTPPJP7q34HXdL4rRAxoEw8yawZaJvh0qbCSUZZ6J7_rC65lCaOzzOWDGyl4b6Y6oyJqzF4DGv3XpC6FSnnfeRyK6xScvr&sa=X&sqi=2&ved=2ahUKEwipkoWHs_uJAxX-K_sDHZVWMy8QtKgLegQIFRAB&biw=1920&bih=945&dpr=1#vhid=_vhFXqAGC-YRRM&vssid=mosaic" class="link">
+					<a href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2Fbrutal.burger.2024%2F" class="link">
 						<span class="fa-stack fa-lg">
 							<i class="fa fa-circle fa-stack-2x"></i>
 							<i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
 						</span>
 					</a>
-					<a href="https://www.google.com/search?sca_esv=201d89d0c7881277&sxsrf=ADLYWIJv2WCun4YRlpraEAju8be6dLMBiw:1732672231660&q=gato+fumon&udm=2&fbs=AEQNm0CbCVgAZ5mWEJDg6aoPVcBgWizR0-0aFOH11Sb5tlNhd9L2WHVzAvhMQbvbuARNpGCC4xfwSkAb6AbJ_cFnFQ_t3F50re_2lfl2PiUOJtSTPPJP7q34HXdL4rRAxoEw8yawZaJvh0qbCSUZZ6J7_rC65lCaOzzOWDGyl4b6Y6oyJqzF4DGv3XpC6FSnnfeRyK6xScvr&sa=X&sqi=2&ved=2ahUKEwipkoWHs_uJAxX-K_sDHZVWMy8QtKgLegQIFRAB&biw=1920&bih=945&dpr=1#vhid=_vhFXqAGC-YRRM&vssid=mosaic" class="link">
+					<a href="https://www.instagram.com/brutalbofficial/" class="link">
 						<span class="fa-stack fa-lg">
 							<i class="fa fa-circle fa-stack-2x"></i>
 							<i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
@@ -92,7 +101,7 @@
 					{% if not forloop.last %}·{% endif %}
 					{% endfor %}
 		</p>
-				<p class="m-0 mbt1">&copy; La Caffettiera 2018</p>
+				<p class="m-0 mbt1">&copy; Brutal - B  Hamburguesería</p>
 			</div>
 	</footer>
 

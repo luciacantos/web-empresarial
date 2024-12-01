@@ -1,10 +1,12 @@
 body {
   font-family: 'Lora';
-  background: url("../img/bg.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.712), rgba(0, 0, 0, 0.712)), url("../img/hamburguesas.jpg");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
 }
+
+
 
 h1,
 h2,
@@ -20,7 +22,8 @@ p {
 }
 
 .text-faded {
-  color: rgba(75, 75, 75, 0.87);
+
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .site-heading {
@@ -35,14 +38,12 @@ p {
   display: block;
   font-size: 2rem;
   font-weight: 800;
-  color: #333333; /* Letras en gris oscuro */
 }
 
 .site-heading .site-heading-lower {
   font-size: 5rem;
   font-weight: 100;
   line-height: 4rem;
-  color: #333333; /* Letras en gris oscuro */
 }
 
 .page-section {
@@ -58,47 +59,48 @@ p {
   display: block;
   font-size: 1rem;
   font-weight: 800;
-  padding-bottom: .5rem;
-  color: #333333; /* Letras en gris oscuro */
+  padding-bottom:.5rem;
+
 }
 
 .section-heading .section-heading-lower {
   display: block;
   font-size: 3rem;
   font-weight: 100;
-  color: #333333; /* Letras en gris oscuro */
 }
+
 
 .section-heading .section-heading-under {
   display: block;
   font-size: 1rem;
   text-transform: none;
   font-weight: 300;
-  margin-top: .5rem;
-  color: #333333; /* Letras en gris oscuro */
+  margin-top:.5rem;
 }
 
 .bg-faded {
-  background-color: rgba(139, 0, 0, 0.85); /* Fondo en rojo oscuro */
+  background-color: rgba(255, 255, 255, 0.932);
 }
 
 #mainNav {
-  background-color: rgba(48, 47, 47, 0.9);
+  background-color: rgba(0, 0, 0, 0.9);
   font-family: 'Raleway';
 }
 
 #mainNav .navbar-brand {
-  color: #333333; /* Letras en gris oscuro */
+  color: #e2a90c;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
-  color: rgba(240, 9, 9, 0.7);
+  color: rgba(255, 255, 255, 0.7);
   font-weight: 800;
 }
 
+#mainNav .navbar-nav .nav-item .nav-link:focus,
 #mainNav .navbar-nav .nav-item.active .nav-link {
-  color: #333333; /* Letras en gris oscuro */
+  color: #e2a90c;
 }
+
 
 @media (min-width: 992px) {
   #mainNav .navbar-nav .nav-item .nav-link {
@@ -108,7 +110,7 @@ p {
     color: rgba(255, 255, 255, 0.4);
   }
   #mainNav .navbar-nav .nav-item.active .nav-link:hover {
-    color: #808080; /* Gris más claro */
+    color: #e2a90c;
   }
 }
 
@@ -153,7 +155,7 @@ p {
 .cta {
   padding-top: 5rem;
   padding-bottom: 5rem;
-  background-color: rgba(139, 0, 0, 0.9); /* Fondo en rojo oscuro */
+  background-color: #e2a90c;
 }
 
 .cta .cta-inner {
@@ -217,7 +219,7 @@ p {
 }
 
 .list-hours .list-hours-item {
-  border-bottom: 1px solid rgba(139, 0, 0, 0.5); /* Fondo en rojo oscuro */
+  border-bottom: 1px solid #e2a90c;
   padding-bottom: .25rem;
   margin-bottom: 1rem;
   font-style: italic;
@@ -225,7 +227,7 @@ p {
 
 .list-hours .list-hours-item.today {
   font-weight: bold;
-  color: #333333; /* Letras en gris oscuro */
+  color: #e2a90c;
 }
 
 @media (min-width: 992px) {
@@ -240,15 +242,15 @@ p {
 }
 
 .footer {
-  background-color: rgba(48, 47, 47, 0.9);
+  background-color: rgba(0, 0, 0, 0.712);
 }
 
 .text-primary {
-  color: #333333 !important; /* Letras en gris oscuro */
+  color: #e2a90c !important;
 }
 
 .bg-primary {
-  background-color: rgba(139, 0, 0, 0.9) !important; /* Fondo en rojo oscuro */
+  background-color: #e2a90c !important;
 }
 
 .btn {
@@ -256,50 +258,60 @@ p {
 }
 
 .btn-primary {
-  background-color: #808080; /* Gris oscuro */
-  border-color: #808080; /* Gris oscuro */
+  background-color: #e2a90c;
+  border-color: #e2a90c;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-  background-color: #6e6e6e; /* Gris más oscuro */
-  border-color: #6e6e6e; /* Gris más oscuro */
+  background-color: #e2a90c;
+  border-color: #e2a90c;
 }
 
 .font-weight-light {
   font-weight: 100 !important;
 }
 
-.mbtm {
+.mbtm{
   padding-top: 5rem;
 }
 
-.mbt {
+.mbt{
   padding-top: 2rem;
 }
 
-.mbt1 {
+.mbt1{
   padding-top: 1.25rem;
 }
 
-a.link {
-  color: #808080; /* Gris oscuro */
+a.link{
+  color: #e2a90c;
 }
 
-a.link:hover {
+a.link:hover{
   text-decoration: none;
-  color: #6e6e6e !important; /* Gris más oscuro */
+  color: #e2a90c !important;
 }
 
-.section-content {
+.section-content{
   font-family: 'Lora' !important;
   font-size: 16px !important;
   font-weight: 400 !important;
   line-height: 28px !important;
-  color: #333333 !important; /* Letras en gris oscuro */
 }
 
-ul.errorlist {
+ul.errorlist{
   padding-top: .75rem;
   font-style: italic;
   color: red;
+}
+
+.confirmation-message {
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  margin: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
