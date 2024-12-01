@@ -79,7 +79,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'VercelDEploy.wsgi.app'
+WSGI_APPLICATION = 'VercelDeploy.wsgi.app'
 
 
 # Database
