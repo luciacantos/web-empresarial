@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-dluufb*0b%@c*xrf+lhe_qu=arf3o0m=vqm*y2hyrjmiu7)@)s
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app', 'localhost','127.0.0.1']
+ALLOWED_HOSTS = ['.vercel.app', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -56,7 +56,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhitenoiseMiddleware',
+	'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'webempresa.urls'
@@ -79,7 +79,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'webempresa.wsgi.app'
+WSGI_APPLICATION = "webempresa.wsgi.app"
 
 
 # Database
@@ -142,7 +142,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL = '/media/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # CKEditor config
 CKEDITOR_CONFIGS = {
@@ -161,11 +161,10 @@ CKEDITOR_CONFIGS = {
 
 # email
 EMAIL_SETTINGS_FILE = os.path.join(BASE_DIR, 'email_settings.json')
-with open(EMAIL_SETTINGS_FILE) as data_file:
-    email_settings = json.load(data_file)
 
+with open(EMAIL_SETTINGS_FILE) as f:
+	email_settings = json.load(f)
 EMAIL_HOST = email_settings['EMAIL_HOST']
-EMAIL_PORT = email_settings['EMAIL_PORT']
-EMAIL_USE_TLS = email_settings['EMAIL_USE_TLS']
 EMAIL_HOST_USER = email_settings['EMAIL_HOST_USER']
 EMAIL_HOST_PASSWORD = email_settings['EMAIL_HOST_PASSWORD']
+EMAIL_PORT = email_settings['EMAIL_PORT']
